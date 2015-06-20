@@ -25,6 +25,11 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+# fix rebooting into recovery
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/aboot:root/sbin/aboot \
+    $(LOCAL_PATH)/recovery/aboot.sh:root/sbin/aboot.sh
+
 $(call inherit-product, build/target/product/full.mk)
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
