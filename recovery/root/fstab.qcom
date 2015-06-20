@@ -26,6 +26,11 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # mount point	fstype		device			[device2] [length=]
+/dev/block/platform/msm_sdcc.1/by-name/sbl1       sbl1              emmc    defaults                                                       defaults
+/dev/block/platform/msm_sdcc.1/by-name/aboot      aboot             emmc    defaults                                                       defaults
+/dev/block/platform/msm_sdcc.1/by-name/rpm        rpm               emmc    defaults                                                       defaults
+/dev/block/platform/msm_sdcc.1/by-name/tz         tz                emmc    defaults                                                        defaults
+
 /dev/block/platform/msm_sdcc.1/by-name/recovery       /recovery        emmc    defaults                                                        defaults
 /dev/block/platform/msm_sdcc.1/by-name/boot           /boot            emmc    defaults                                                        defaults
 /dev/block/platform/msm_sdcc.1/by-name/modem          /modem           vfat    defaults                                                        defaults
@@ -35,6 +40,8 @@
 /dev/block/platform/msm_sdcc.1/by-name/cda            /hidden/data     ext4    defaults                                                        defaults 
 /dev/block/platform/msm_sdcc.1/by-name/cache          /cache           ext4    rw,noatime,nosuid,nodev,barrier=1,data=ordered                  wait,check
 /dev/block/platform/msm_sdcc.1/by-name/userdata       /data            ext4    rw,noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc  wait,check
+/dev/block/platform/msm_sdcc.1/by-name/ftm            /ftm             emmc    defaults                                                        defaults
+/dev/block/platform/msm_sdcc.1/by-name/ftm_system     /ftm_system	     ext4    defaults                                                        defaults
 
-/devices/msm_sdcc.2/mmc_host                 /storage/sdcard1         vfat    nosuid,nodev                    wait,voldmanaged=sdcard1:auto,noemulatedsd
+/devices/msm_sdcc.2/mmc_host                 /storage/sdcard1        fuseblk    nosuid,nodev                    wait,voldmanaged=sdcard1:auto,noemulatedsd
 /devices/platform/msm_hsusb_host/usb1                 /storage/usb vfat    nosuid,nodev                                wait,voldmanaged=usb:auto

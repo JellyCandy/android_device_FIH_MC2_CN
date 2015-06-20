@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_mx4pro.mk
+    $(LOCAL_DIR)/device_MC2_CN.mk
